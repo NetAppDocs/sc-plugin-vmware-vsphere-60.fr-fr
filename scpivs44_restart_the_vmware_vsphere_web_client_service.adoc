@@ -1,0 +1,51 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_restart_the_vmware_vsphere_web_client_service.html 
+keywords:  
+summary: Si le client SnapCenter VMware vSphere ne se comporte pas correctement, vous devrez peut-être effacer le cache du navigateur. Si le problème persiste, redémarrez le service client Web. 
+---
+= Redémarrez le service client VMware vSphere
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Si le client SnapCenter VMware vSphere ne se comporte pas correctement, vous devrez peut-être effacer le cache du navigateur. Si le problème persiste, redémarrez le service client Web.
+
+
+
+== Redémarrez le service client VMware vSphere dans un vCenter Linux
+
+.Avant de commencer
+Vous devez exécuter vCenter 7.0U1 ou ultérieure.
+
+.Étapes
+. Utilisez SSH pour vous connecter à l'appliance vCenter Server en tant que root.
+. Accédez au shell de l'appliance ou AU shell BASH à l'aide de la commande suivante :
++
+`shell`
+
+. Arrêtez le service client Web à l'aide de la commande HTML5 suivante :
++
+`service-control --stop vsphere-ui`
+
+. Supprimez tous les packages HTML5 scvm obsolètes sur vCenter à l'aide de la commande shell suivante :
++
+`etc/vmware/vsphere-ui/vc-packages/vsphere-client-serenity/`
+
++
+`rm -rf com.netapp.scv.client-<version_number>`
+
++
+
+IMPORTANT: Ne supprimez pas les packages VASA ou vCenter 7.x et versions ultérieures.
+
+. Démarrez le service client Web à l'aide de la commande HTML5 suivante :
++
+`service-control --start vsphere-ui`
+
+

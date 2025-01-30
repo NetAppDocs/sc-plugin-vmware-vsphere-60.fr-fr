@@ -1,0 +1,43 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_download_the_ova_open_virtual_appliance.html 
+keywords:  
+summary: Le fichier .tar inclut une OVA, qui est un ensemble de microservices pour la protection des données des VM et des datastores, ainsi que le fichier de certificat. 
+---
+= Télécharger Open Virtual Appliance (OVA)
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Avant d'installer Open Virtual Appliance (OVA), ajoutez le certificat à vCenter. Le fichier .tar contient les certificats OVA et Entrust Root et Intermediate, les certificats se trouvent dans le dossier certificats. Le déploiement OVA est pris en charge dans VMware vCenter 7u1 et versions ultérieures.
+
+Dans VMware vCenter 7.0.3 et versions ultérieures, le fichier OVA signé par le certificat Entrust n'est plus approuvé. Vous devez effectuer la procédure suivante pour résoudre le problème.
+
+.Étapes
+. Pour télécharger le plug-in SnapCenter pour VMware :
++
+** Connectez-vous au site de support NetApp ( https://mysupport.netapp.com/products/index.html["https://mysupport.netapp.com/products/index.html"^]).
+** Dans la liste de produits, sélectionnez *Plug-in SnapCenter pour VMware vSphere*, puis cliquez sur le bouton *Télécharger la dernière version*.
+** Téléchargez le plug-in SnapCenter pour VMware vSphere `.tar` depuis n'importe quel emplacement.
+
+
+. Extraire le contenu du fichier tar. Le fichier tar contient le dossier OVA et certs. Le dossier certificats contient les certificats racine et intermédiaire Entrust.
+. Connectez-vous avec le client vSphere au serveur vCenter.
+. Accédez à *Administration > certificats > gestion des certificats*.
+. En regard de *certificats racine de confiance*, cliquez sur *Ajouter*
++
+** Accédez au dossier _certs_.
+** Sélectionnez les certificats racine et intermédiaire Entrust.
+** Installez chaque certificat un par un.
+
+
+. Les certificats sont ajoutés à un panneau sous *certificats racine approuvés*. Une fois les certificats installés, une OVA peut être vérifiée et déployée.
+
+
+
+NOTE: Si l'OVA téléchargée n'est pas falsifiée, la colonne *Publisher* affiche *certificat approuvé*.

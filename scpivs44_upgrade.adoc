@@ -1,0 +1,90 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_upgrade.html 
+keywords:  
+summary: 'Si vous utilisez le plug-in SnapCenter pour l"appliance virtuelle VMware vSphere, vous pouvez effectuer la mise à niveau vers une version plus récente.' 
+---
+= Mise à niveau à partir d'une version antérieure du plug-in SnapCenter pour VMware vSphere
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+
+NOTE: La mise à niveau vers SCV 6.0 est prise en charge uniquement sur VMware vCenter Server 7, mise à jour 1 et versions ultérieures. Pour le serveur VMware vCenter antérieur à la version 7, mise à jour 1, vous devez continuer à utiliser SCV 4.7. La mise à niveau est perturbatrice sur des versions de serveur VMware vCenter non prises en charge.
+
+Si vous utilisez le plug-in SnapCenter pour l'appliance virtuelle VMware vSphere, vous pouvez effectuer la mise à niveau vers une version plus récente. Le processus de mise à niveau annule l'enregistrement du plug-in existant et déploie un plug-in compatible uniquement avec vSphere 7.0U1 et les versions ultérieures.
+
+
+
+== Chemins de mise à niveau
+
+|===
+
+
+| Si vous utilisez le plug-in SnapCenter pour la version de VMware vSphere (SCV)... | Vous pouvez directement mettre à niveau le plug-in SnapCenter pour VMware vSphere vers... 
+
+
+| SCV 5,0 | Mise à niveau vers le distributeur sélectif 6.0 
+
+
+| SCV 4,9 | Mise à niveau vers les distributeurs sélectifs 5.0 et 6.0 
+
+
+| SCV 4,8 | Mise à niveau vers les distributeurs sélectifs 4.9 et 5.0 
+
+
+| SCV 4,7 | Mise à niveau vers les distributeurs sélectifs 4.8 et 4.9 
+
+
+| SCV 4,6 | Mise à niveau vers les distributeurs sélectifs 4.7 et 4.8 
+|===
+
+TIP: Sauvegarder le plug-in SnapCenter pour VMware vSphere OVA avant de lancer une mise à niveau.
+
+
+NOTE: Le basculement de votre configuration réseau statique vers DHCP n'est pas pris en charge.
+
+.Étapes
+. Préparation à la mise à niveau en désactivant le plug-in SnapCenter pour VMware vSphere.
++
+.. Connectez-vous au plug-in SnapCenter pour l'interface graphique de gestion VMware vSphere. L'adresse IP s'affiche lorsque vous déployez le plug-in SnapCenter pour VMware vSphere.
+.. Cliquez sur *Configuration* dans le volet de navigation de gauche, puis cliquez sur l'option *Service* dans la section Détails du plug-in pour désactiver le plug-in.
+
+
+. Téléchargez le fichier de mise à niveau `.iso` .
++
+.. Connectez-vous au site de support NetApp (https://mysupport.netapp.com/products/index.html[]).
+.. Dans la liste de produits, sélectionnez *Plug-in SnapCenter pour VMware vSphere*, puis cliquez sur le bouton *DOWNLOAD LATEST*.
+.. Téléchargez le fichier de mise à niveau du plug-in SnapCenter pour VMware vSphere `.iso` depuis n'importe quel emplacement.
+
+
+. Installez la mise à niveau.
++
+.. Dans votre navigateur, accédez à VMware vSphere vCenter.
+.. Dans l'interface graphique de vCenter, cliquez sur *vSphere client (HTML)*.
+.. Connectez-vous à la page *Single Sign-on de VMware vCenter*.
+.. Dans le volet du navigateur, cliquez sur le serveur virtuel que vous souhaitez mettre à niveau, puis cliquez sur l'onglet *Résumé*.
+.. Dans le volet *Related Objects*, cliquez sur n'importe quel datastore dans la liste, puis cliquez sur l'onglet *Summary*.
+.. Dans l'onglet *fichiers* du datastore sélectionné, cliquez sur n'importe quel dossier de la liste, puis cliquez sur *Télécharger fichiers*.
+.. Dans l'écran contextuel de téléchargement, naviguez jusqu'à l'emplacement où vous avez téléchargé le `.iso` fichier, puis cliquez sur l' `.iso` image du fichier, puis cliquez sur *Ouvrir*. Le fichier est chargé dans le datastore.
+.. Revenez à la VM que vous souhaitez mettre à niveau, puis cliquez sur l'onglet *Résumé*. Dans le volet *VM Hardware*, dans le champ CD/DVD, la valeur doit être "déconnectée".
+.. Cliquez sur l'icône de connexion dans le champ CD/DVD et sélectionnez *connexion à l'image CD/DVD sur un datastore*.
++
+image:scpivs44_image42.png["Interface utilisateur vCenter"]
+
+.. Dans l'assistant, procédez comme suit :
++
+... Dans la colonne datastores, sélectionnez le datastore où vous avez téléchargé le `.iso` fichier.
+... Dans la colonne contenu, accédez au `.iso` fichier que vous avez téléchargé, assurez-vous que "image ISO" est sélectionné dans le champ Type de fichier, puis cliquez sur *OK*. Attendez que le champ affiche l'état « connecté ».
+
+
+.. Connectez-vous à la console de maintenance en accédant à l'onglet *Résumé* de l'appliance virtuelle, puis cliquez sur la flèche verte d'exécution pour démarrer la console de maintenance.
+.. Saisissez *2* pour la configuration du système, puis saisissez *8* pour la mise à niveau.
+.. Saisissez *y* pour continuer et démarrer la mise à niveau.
+
+
+

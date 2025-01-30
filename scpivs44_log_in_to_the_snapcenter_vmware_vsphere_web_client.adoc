@@ -1,0 +1,30 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_log_in_to_the_snapcenter_vmware_vsphere_web_client.html 
+keywords:  
+summary: 'Une fois déployé le plug-in SnapCenter pour VMware vSphere, il installe un client VMware vSphere sur vCenter, qui s"affiche sur l"écran vCenter avec d"autres clients vSphere.' 
+---
+= Connectez-vous au client SnapCenter vSphere
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Une fois déployé le plug-in SnapCenter pour VMware vSphere, il installe un client VMware vSphere sur vCenter, qui s'affiche sur l'écran vCenter avec d'autres clients vSphere.
+
+.Avant de commencer
+Le protocole TLS (transport Layer Security) doit être activé dans vCenter. Voir la documentation VMware.
+
+.Étapes
+. Dans votre navigateur, accédez à VMware vSphere vCenter.
+. Connectez-vous à la page *Single Sign-on de VMware vCenter*.
++
+
+IMPORTANT: Cliquez sur le bouton *connexion*. En raison d'un problème VMware connu, n'utilisez pas la clé ENTER pour vous connecter. Pour plus d'informations, reportez-vous à la documentation VMware sur les problèmes liés au client hôte intégré ESXi.
+
+. Sur la page *VMware vSphere client*, cliquez sur Menu dans la barre d'outils, puis sélectionnez *SnapCenter Plug-in pour VMware vSphere*.
+

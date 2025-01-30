@@ -1,0 +1,31 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_monitor_jobs.html 
+keywords:  
+summary: 'Après avoir effectué toute opération de protection des données à l"aide du client VMware vSphere, vous pouvez surveiller l"état des tâches à partir de l"onglet surveillance des tâches du tableau de bord et afficher les détails des tâches.' 
+---
+= Surveiller les tâches
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Après avoir effectué toute opération de protection des données à l'aide du client VMware vSphere, vous pouvez surveiller l'état des tâches à partir de l'onglet surveillance des tâches du tableau de bord et afficher les détails des tâches.
+
+.Étapes
+. Sur la page de raccourci du client vCenter, sélectionnez SnapCenter Plug-in for VMware vSphere (SCV).
+. Dans le volet de navigation de gauche de SCV, sélectionnez *Tableau de bord*.
+. Lorsque deux instances vCenter ou plus sont configurées en mode lié, sélectionner l'instance du plug-in SCV et sélectionner l'onglet *Job Monitor*. L'onglet moniteur de tâches répertorie chaque travail et son état, l'heure de début et l'heure de fin. Si les noms des travaux sont longs, vous devrez peut-être faire défiler vers la droite pour afficher les heures de début et de fin. L'affichage est actualisé toutes les 30 secondes.
++
+** Sélectionnez l'icône Actualiser dans la barre d'outils pour actualiser l'affichage à la demande.
+** Sélectionnez l'icône de filtre pour choisir la plage horaire, le type, la balise et l'état des travaux que vous souhaitez afficher. Le filtre est sensible à la casse.
+** Sélectionnez l'icône d'actualisation dans la fenêtre Détails du travail pour actualiser l'affichage pendant l'exécution du travail.
+
+
+
+
+Si le tableau de bord n'affiche pas les informations sur les travaux, reportez-vous à la https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/SnapCenter_vSphere_web_client_dashboard_does_not_display_jobs["Article de la base de connaissances : le tableau de bord du client SnapCenter vSphere n'affiche pas les tâches"^].

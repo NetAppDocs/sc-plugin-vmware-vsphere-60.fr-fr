@@ -1,0 +1,66 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_minimum_vcenter_privileges_required.html 
+keywords:  
+summary: Avant de commencer le déploiement du plug-in SnapCenter pour VMware vSphere, assurez-vous de disposer du minimum de privilèges vCenter requis. 
+---
+= Privilèges vCenter minimum requis
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Avant de commencer le déploiement du plug-in SnapCenter pour VMware vSphere, assurez-vous de disposer du minimum de privilèges vCenter requis.
+
+
+
+== Privilèges requis pour le rôle d'administrateur vCenter
+
+Datastore.AllocateSpace datastore.Browse datastore.Delete datastore.FileManagement datastore.Move datastore.Renommer extension.Enregistrer extension.désinscrire extension.mettre à jour Host.Config.VirtualancedConfig hôte.Config.hôte.Config.hôte.Config.hôte.CreateVM hôte.hôte.ToVirtualConvert.hôte.Contrethôte.ContresVirtualExVirtualVM.hôte.hôte.hôte.hôte.hôte.ContresInteract.hôte.hôte.hôte.hôte.ContretRéreContres.machine.hôte.hôte.hôte.hôte.hôte.machine.hôte.hôte.hôte.hôte.hôte.hôte.hôte.hôte.hôte.hôte.hôte.hôte.hôte.hôte.hôte.hôte.hôte.hôte.hôte.hôte.hôte.hôte.hôte.hôte.hôte.hôte.hôte.hôte.hôte.hôte.hôte.hôte.hôte.hôte.hôte.hôte.hôte.hôte.hôte.hôte.hôte.virtuel.hôte.hôte.virtuel.hôte.hôte.hôte.hôte.hôte.hôte.virtuel.hôte.hôte.hôte.hôte.hôte.hôte.virtuel.hôte.hôte
+
+
+
+== Privilèges requis spécifiques au plug-in SnapCenter pour VMware vCenter
+
+|===
+
+
+| *Privilèges* | *Étiquette* 
+
+
+| Fichier de restauration.netappSCV.Guest | Restauration de fichiers invités 
+
+
+| Montage du distributeur auxiliaire à récupération.netappDist | Monter/démonter 
+
+
+| NetappSCV.Backup.DeleteBackupJob | Supprimer le groupe de ressources/sauvegarde 
+
+
+| NetappSCV.Configure.ConfigenceStorageSystems.Delete | Supprimer les systèmes de stockage 
+
+
+| Vue du distributeur sélectif de NetApp | Afficher 
+
+
+| NetappSCV.Recovery.Recovery VM | Restaurer la machine virtuelle 
+
+
+| NetappSCV.Configure.ConfigureStorageSystems.AddUpdate | Ajouter/Modifier des systèmes de stockage 
+
+
+| NetappSCV.Backup.BackupNow | Sauvegarder maintenant 
+
+
+| NetappSCV.invité.configurer | Configuration invité 
+
+
+| NetappSCV.Configure.ConfigtureSnapCenterServer | Configurez SnapCenter Server 
+
+
+| Programmée pour le distributeur sélectif de NetApp. Sauvegarde | Créer un groupe de ressources 
+|===
