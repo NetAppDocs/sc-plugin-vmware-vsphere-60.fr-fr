@@ -2160,4 +2160,5 @@
   <block id="c257f5c852c12409e63afb17104f69c5" category="sidebar">Les API REST</block>
   <block id="a3d53cfe9124531cb5f9bbfefe704326" category="sidebar">Les workflows d'API REST pour modifier les planifications intégrés</block>
   <block id="3da6944b1baaec4beb70694ac307fd1f" category="sidebar">Effectuez une mise à niveau vers un nouveau correctif de la même version</block>
+  <block id="88464b0f22e28142bc76c51bba424a64" category="cell">Environnements NFS : restauration ONTAP SnapMirror Environnements VMFS : clonage et montage avec Storage VMotion</block>
 </blocks>
